@@ -3,8 +3,13 @@ https://learn.microsoft.com/en-us/rest/api/storageservices/
 
 ## Azure Storage Create by Azure Portal
 Go to https://portal.azure.com
+<div style="float:left;width:100%;clear:both;"><img src="doc-image/step-0000.png" style="width:50%;margin-left:25%;"></div>
 
 Then select from left side menu `Storage accounts` and inside click on tab `Create`
+<div style="float:left;width:100%;clear:both;"><img src="doc-image/step-0001.png" style="width:50%;margin-left:25%;"></div>
+
+
+
 
 ## Azure Storage Create by Azure CLI
 
