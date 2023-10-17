@@ -30,7 +30,4 @@ yarn-error.log
 error_log
 .error_log
 *error_log
-
 /files
-
-Makefile
