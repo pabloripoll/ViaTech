@@ -1,40 +1,39 @@
 # Azure Storage Service
-
 https://learn.microsoft.com/en-us/rest/api/storageservices/
 
-https://github.com/azure
-
-## Azure Storage Start Up
-
+## Azure Storage Create by Azure Portal
 Go to https://portal.azure.com
 
-Then select from side panel menu `Storage accounts`
+Then select from left side menu `Storage accounts` and inside click on tab `Create`
 
-On tab `Create`
+## Azure Storage Create by Azure CLI
 
 Login to Azure account and go to `portal.azure.com/#blade/HubsExtension/BrowseResourceGroups` and on top navigation menu click on `Cloud Shell`
 
+### https://learn.microsoft.com/es-es/cli/azure/ad/sp?view=azure-cli-latest
+
+### https://learn.microsoft.com/es-es/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-create-for-rbac()
+
 Create Azure Service Principle add the following commands
 ```bash
-$ az ad sp create-for-rbac --name "sp_for_creating_storageAccount" -- role contributor
-...
+$ az ad sp create-for-rbac --name test_storageAccount
+The output includes credentials that you must protect. Be sure that you do not include these credentials in your code or check the credentials into your source control. For more information, see https://aka.ms/azadsp-cli
 {
-  "appId": "798256c4-bbdc-4f7a-a20a-",
-  "displayName": "azure-cli-2021-02-10-22-47-08",
-  "name": "http://azure-cli-2021-02-10-22-47-08",
-  "password": "",
-  "tenant": "72f988bf-86f1-41af-91ab-"
+  "appId": "0gfa8bbe-9fde-4df5-a096-d8f0482c003e",
+  "displayName": "azure-cli-2023-10-17-13-58-00",
+  "password": "P1R8Q~AFAMxyuM2o46WqtIasdasddUojhI4-qbTD",
+  "tenant": "f8e4b634-e90f-4306-7894-0010756e7168"
 }
 ```
 
 Create a resoruce group
 ```bash
-$ az group create --location westus --name rg_for_storageAccount
+$ az group create --location westus --name test_storageAccount
 ...
 {
-  "id": "/subscriptions/fa628409-59a2-43ed-afde-7b509d932bbd/resourceGroup/rg_for_storageAccount",
+  "id": "/subscriptions/fa628409-adf4-fasd8-afde-7b509d932bbd/resourceGroup/test_storageAccount",
   "location": "westus",
-  "manageBy": "rg_for_storageAccount",
+  "manageBy": "test_storageAccount",
   "name": "",
   "properties": {
     "provisioningState": "Succeded"
@@ -44,18 +43,18 @@ $ az group create --location westus --name rg_for_storageAccount
 }
 ```
 
-### Get Access Token
-
-```json
+Get Access Token
+```bash
 
 ```
 
-## Postman
-Azure_storage_acc_env.postman_environment.json
+## Postman Colletions for Azure Storage
+
+enviroment.postman_environment.json
 ```json
 {
-	"id": "db953e65-3c4c-4121-b413-316b75767d23",
-	"name": "Azure_storage_acc_env",
+	"id": "",
+	"name": "",
 	"values": [
 		{
 			"key": "client_id",
@@ -104,12 +103,12 @@ Azure_storage_acc_env.postman_environment.json
 		}
 	],
 	"_postman_variable_scope": "environment",
-	"_postman_exported_at": "2021-09-23T08:25:19.673Z",
+	"_postman_exported_at": "2023-10-17T12:25:19.673Z",
 	"_postman_exported_using": "Postman/9.0.2"
 }
 ```
 
-Azure Storage Account.postman_collection.json
+account.postman_collection.json
 ```json
 {
 	"info": {
