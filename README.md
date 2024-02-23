@@ -1,6 +1,6 @@
 # Directory purge for Windows
 
-This small program became from an email request and I find it good to share
+This small program became from an email request for support for a [Windows Server](https://www.microsoft.com/es-es/windows-server) and I found it good to share with you.
 
 Objetives:
 ```
